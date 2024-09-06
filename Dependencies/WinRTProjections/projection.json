@@ -1,0 +1,25 @@
+{
+    "modules": {
+        "UWP": {
+            "assemblies": [
+                "Windows.*"
+            ],
+            "types": []
+        },
+        "WindowsAppSDK": {
+            "assemblies": [
+                "Microsoft.UI",
+                "Microsoft.Windows.*"
+            ],
+            "types": []
+        },
+        "WinUI": {
+            "assemblies": [
+                "Microsoft.UI.Xaml.*"
+            ],
+            "types": [
+                "Microsoft.UI.Xaml.Controls.Button"
+            ]
+        }
+    }
+}

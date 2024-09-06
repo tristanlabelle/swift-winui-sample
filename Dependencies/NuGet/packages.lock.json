@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dependencies": {
+    "Any,Version=v0.0": {
+      "Microsoft.Windows.SDK.Contracts": {
+        "type": "Direct",
+        "requested": "[10.0.19041.2, 10.0.19041.2]",
+        "resolved": "10.0.19041.2",
+        "contentHash": "PBPrkDx5BMItV0+cDBRJg6itl2miC9t4igEX+ym0BuN65xu/mTzq8fbVzAME6CXAY4eMcxACLnGu6SWufxwSCQ=="
+      },
+      "Microsoft.WindowsAppSDK": {
+        "type": "Direct",
+        "requested": "[1.6.240829007, 1.6.240829007]",
+        "resolved": "1.6.240829007",
+        "contentHash": "Ij0jXARFOlRY+n7M32ZS9Kbf+x7gmnhWVnMP3eKHe83eu/2pzh9f4gjmoZ5fAgoZaKWCa2PvcxzHx0gtRXcKRQ=="
+      },
+      "Microsoft.Web.WebView2": {
+        "type": "Direct",
+        "requested": "[1.0.2739.15, 1.0.2739.15]",
+        "resolved": "1.0.2739.15",
+        "contentHash": "hZg7vHWBg4RIiK3rhkNqX3hcBqqoVXVrrO2BVrVOiSmEgfLa7lY64G1tWh2VY84MfHIFLCAQNwn3Rwvu+ICHyw=="
+      },
+      "TristanLabelle.SwiftWinRT": {
+        "type": "Direct",
+        "requested": "[0.0.0, 0.0.0]",
+        "resolved": "0.0.0",
+        "contentHash": "l7vxjWpVDdW6Z1vNvmseJzO6AWV9tA8W0I3rwj6Gxf38+Z5BWurjP2uQ9zP46WOyTOMcOvD0CGxlNqlsrOLUew=="
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Add nupkg files here to override resolution from nuget.org.
