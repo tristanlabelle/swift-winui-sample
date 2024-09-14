@@ -8,18 +8,26 @@
         },
         "WindowsAppSDK": {
             "assemblies": [
+                "Microsoft.Graphics",
                 "Microsoft.UI",
+                "Microsoft.UI.Text",
                 "Microsoft.Windows.*"
             ],
             "types": []
         },
         "WinUI": {
             "assemblies": [
-                "Microsoft.UI.Xaml.*"
+                "Microsoft.UI.Xaml"
             ],
             "types": [
                 "Microsoft.UI.Xaml.Controls.Button"
             ]
+        },
+        "WebView2": {
+            "assemblies": [
+                "Microsoft.Web.WebView2.Core"
+            ],
+            "types": []
         }
     }
 }
