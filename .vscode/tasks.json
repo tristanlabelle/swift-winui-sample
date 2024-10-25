@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cmake",
+			"label": "Build Sample App",
+			"command": "build",
+			"targets": [ "Sample" ],
+			"preset": "${command:cmake.activeBuildPresetName}",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "always",
+				"revealProblems": "onProblem",
+				"clear": true
+			},
+			"problemMatcher": [ "$swiftc" ],
+		}
+	]
+}
