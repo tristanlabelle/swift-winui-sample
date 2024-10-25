@@ -1,5 +1,8 @@
 add_executable(Sample main.swift)
 target_link_libraries(Sample PRIVATE
-    COM WindowsRuntime
+    WindowsRuntime
     MddBootstrap
-    UWP WindowsAppSDK WinUI)
+    WinAppSDK
+    WinUI
+    WinUI_MicrosoftUIXaml
+    UWP)
