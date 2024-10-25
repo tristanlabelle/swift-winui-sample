@@ -1,0 +1,4 @@
+module MddBootstrap {
+    header "MddBootstrap.h"
+    export *
+}
