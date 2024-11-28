@@ -23,4 +23,4 @@ add_library(MddBootstrap SHARED IMPORTED GLOBAL)
 target_include_directories(MddBootstrap INTERFACE "${CMAKE_CURRENT_BINARY_DIR}/include")
 set_target_properties(MddBootstrap PROPERTIES
     IMPORTED_IMPLIB "${Microsoft.WindowsAppSDK_NUGET_PACKAGE_DIR}/lib/win10-x64/Microsoft.WindowsAppRuntime.Bootstrap.lib"
-    IMPORTED_LOCATION "${CMAKE_CURRENT_BINARY_DIR}/runtimes/win-x64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll")
+    IMPORTED_LOCATION "${Microsoft.WindowsAppSDK_NUGET_PACKAGE_DIR}/runtimes/win-x64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll")

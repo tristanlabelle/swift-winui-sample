@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "cmake",
-			"label": "Build Sample App",
+			"label": "Build App",
 			"command": "build",
 			"targets": [ "Sample" ],
 			"preset": "${command:cmake.activeBuildPresetName}",

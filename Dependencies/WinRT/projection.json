@@ -13,7 +13,9 @@
                 "Microsoft.UI.Text",
                 "Microsoft.Windows.*"
             ],
-            "types": []
+            "types": [
+                "Microsoft.UI.Colors"
+            ]
         },
         "WinUI": {
             "assemblies": [
@@ -24,7 +26,11 @@
                 "Microsoft.UI.Xaml.Controls.Button",
                 "Microsoft.UI.Xaml.Controls.Grid",
                 "Microsoft.UI.Xaml.Controls.TextBlock",
-                "Microsoft.UI.Xaml.Window"
+                "Microsoft.UI.Xaml.Controls.XamlControlsResources",
+                "Microsoft.UI.Xaml.Markup.IXamlMetadataProvider",
+                "Microsoft.UI.Xaml.Media.SolidColorBrush",
+                "Microsoft.UI.Xaml.Window",
+                "Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider"
             ]
         },
         "WebView2": {

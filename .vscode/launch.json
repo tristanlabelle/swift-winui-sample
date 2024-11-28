@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug App",
+            "type": "swift-lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}\\build\\debug\\Sources\\Sample.exe",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build App"
+        }
+    ]
+}
