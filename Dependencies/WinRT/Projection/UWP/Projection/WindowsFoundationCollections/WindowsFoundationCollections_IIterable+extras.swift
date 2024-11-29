@@ -1,0 +1,54 @@
+import WindowsRuntime
+
+extension Sequence {
+    /// Converts a Swift sequence to a WinRT IIterable.
+    /// - Parameter sequence: The sequence to convert.
+    /// - Returns: The converted IIterable.
+    public func toWinRTIIterable() -> WindowsFoundationCollections_IIterable<Element> {
+        SequenceIterable(self)
+    }
+}
+
+fileprivate class SequenceIterable<S: Sequence>: WinRTPrimaryExport<IInspectableBinding>, WindowsFoundationCollections_IIterableProtocol {
+    typealias T = S.Element
+
+    private let sequence: S
+
+    init(_ sequence: S) {
+        self.sequence = sequence
+    }
+
+    func first() throws -> WindowsFoundationCollections_IIterator<S.Element> {
+        SequenceIterator(sequence.makeIterator())
+    }
+}
+
+internal class SequenceIterator<I: IteratorProtocol>: WinRTPrimaryExport<IInspectableBinding>, WindowsFoundationCollections_IIteratorProtocol {
+    typealias T = I.Element
+
+    private var iterator: I
+    private var _current: T?
+
+    init(_ iterator: I) {
+        self.iterator = iterator
+        self._current = self.iterator.next()
+    }
+
+    var hasCurrent: Bool { get throws { _current != nil } }
+
+    var current: T {
+        get throws {
+            guard let _current else { throw COMError.illegalMethodCall }
+            return _current
+        }
+    }
+
+    func moveNext() throws -> Bool {
+        _current = iterator.next()
+        return _current != nil
+    }
+
+    func getMany(_ items: [I.Element]) throws -> UInt32 {
+        throw COMError.notImpl // TODO(#31): Implement out arrays
+    }
+}

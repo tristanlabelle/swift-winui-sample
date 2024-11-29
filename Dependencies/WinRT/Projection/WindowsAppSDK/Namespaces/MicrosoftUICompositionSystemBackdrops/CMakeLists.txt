@@ -1,0 +1,5 @@
+add_library(WindowsAppSDK_MicrosoftUICompositionSystemBackdrops STATIC
+    Aliases.swift)
+
+target_link_libraries(WindowsAppSDK_MicrosoftUICompositionSystemBackdrops PUBLIC
+    WindowsAppSDK)

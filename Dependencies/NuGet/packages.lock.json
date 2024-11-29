@@ -19,12 +19,6 @@
         "requested": "[1.0.2739.15, 1.0.2739.15]",
         "resolved": "1.0.2739.15",
         "contentHash": "hZg7vHWBg4RIiK3rhkNqX3hcBqqoVXVrrO2BVrVOiSmEgfLa7lY64G1tWh2VY84MfHIFLCAQNwn3Rwvu+ICHyw=="
-      },
-      "TristanLabelle.SwiftWinRT": {
-        "type": "Direct",
-        "requested": "[0.0.0, 0.0.0]",
-        "resolved": "0.0.0",
-        "contentHash": "0W8cp0dqs0M2OQozLktqv68VvMztBZ6W2Ogcux1DHd4M5T3Z247x9FYlJjLrhS7pxDlDB8YQmdK0UmJsJhZzZw=="
       }
     }
   }

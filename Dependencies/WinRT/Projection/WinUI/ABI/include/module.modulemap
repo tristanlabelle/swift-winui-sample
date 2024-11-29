@@ -1,0 +1,4 @@
+module WinUI_ABI {
+    header "SWRT/WinUI.h"
+    export *
+}

@@ -1,0 +1,17 @@
+module COM_ABI {
+    header "SWRT/COM.h"
+    header "SWRT/windows/BaseTsd.h"
+    header "SWRT/windows/combaseapi.h"
+    header "SWRT/windows/guiddef.h"
+    header "SWRT/windows/oaidl.h"
+    header "SWRT/windows/objidl.h"
+    header "SWRT/windows/oleauto.h"
+    header "SWRT/windows/unknwn.h"
+    header "SWRT/windows/wtypes.h"
+    export *
+}
+
+module COM_PrivateABI {
+    header "SwiftCOMObject.h"
+    export *
+}

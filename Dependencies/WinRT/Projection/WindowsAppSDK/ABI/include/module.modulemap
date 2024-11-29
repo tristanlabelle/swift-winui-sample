@@ -1,0 +1,4 @@
+module WindowsAppSDK_ABI {
+    header "SWRT/WindowsAppSDK.h"
+    export *
+}

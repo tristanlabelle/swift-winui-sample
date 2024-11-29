@@ -1,0 +1,5 @@
+add_library(WindowsAppSDK_MicrosoftWindowsApplicationModelResources STATIC
+    Aliases.swift)
+
+target_link_libraries(WindowsAppSDK_MicrosoftWindowsApplicationModelResources PUBLIC
+    WindowsAppSDK)

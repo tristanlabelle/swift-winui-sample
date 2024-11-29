@@ -1,0 +1,4 @@
+module UWP_ABI {
+    header "SWRT/UWP.h"
+    export *
+}

@@ -1,0 +1,8 @@
+add_subdirectory(MicrosoftUI)
+add_subdirectory(MicrosoftUIComposition)
+add_subdirectory(MicrosoftUICompositionSystemBackdrops)
+add_subdirectory(MicrosoftUIContent)
+add_subdirectory(MicrosoftUIDispatching)
+add_subdirectory(MicrosoftUIInput)
+add_subdirectory(MicrosoftUIWindowing)
+add_subdirectory(MicrosoftWindowsApplicationModelResources)
