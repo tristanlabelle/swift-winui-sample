@@ -10,11 +10,10 @@ import WinUI_MicrosoftUIXamlXamlTypeInfo // XamlControlsXamlMetaDataProvider
 
 /// Base class for WinUI applications written in Swift.
 open class SwiftApplication: Application, IXamlMetadataProviderProtocol, @unchecked Sendable {
-    private var ixamlMetadataProviderEmbedding: COMEmbedding = .uninitialized
+    private var ixamlMetadataProvider: COMImplements<IXamlMetadataProviderBinding> = .init()
 
     public required override init() throws {
         try super.init()
-        ixamlMetadataProviderEmbedding.initialize(embedder: self, virtualTable: IXamlMetadataProviderBinding.virtualTablePointer)
     }
 
     open override func onLaunched(_ args: LaunchActivatedEventArgs?) throws {
@@ -23,14 +22,14 @@ open class SwiftApplication: Application, IXamlMetadataProviderProtocol, @unchec
     }
 
     // Extra interface support
-    open override class var implements: [COMImplements] {
-        super.implements + [ .init(IXamlMetadataProviderBinding.self) ]
+    open override class var queriableInterfaces: [any COMTwoWayBinding.Type] {
+        super.queriableInterfaces + [ IXamlMetadataProviderBinding.self ]
     }
 
     open override func _queryInterface(_ id: COMInterfaceID) throws -> IUnknownReference {
         switch id {
             case IXamlMetadataProviderBinding.interfaceID:
-                return ixamlMetadataProviderEmbedding.toCOM()
+                return ixamlMetadataProvider.toCOM(owner: self).cast()
             default:
                 return try super._queryInterface(id)
         }
