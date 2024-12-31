@@ -6,7 +6,7 @@ set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
 message(STATUS "Restoring NuGet packages...")
 execute_process(
     COMMAND nuget.exe restore
-        -UseLockFile -LockedMode -Verbosity quiet
+        -Verbosity quiet
         -PackagesDirectory ${CMAKE_CURRENT_BINARY_DIR}
         -ConfigFile ${CMAKE_CURRENT_SOURCE_DIR}/nuget.config
         ${CMAKE_CURRENT_SOURCE_DIR}/packages.config
