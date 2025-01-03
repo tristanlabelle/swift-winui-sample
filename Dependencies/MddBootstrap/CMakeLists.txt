@@ -21,6 +21,17 @@ execute_process(
 # Declare the MddBootstrap library as an imported target.
 add_library(MddBootstrap SHARED IMPORTED GLOBAL)
 target_include_directories(MddBootstrap INTERFACE "${CMAKE_CURRENT_BINARY_DIR}/include")
+
+if("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "x86")
+    set(ARCH x86)
+elseif("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "AMD64")
+    set(ARCH x64)
+elseif("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "ARM64")
+    set(ARCH arm64)
+else()
+    message(FATAL_ERROR "System processor is not supported by the Windows App SDK: ${CMAKE_SYSTEM_PROCESSOR}")
+endif()
+
 set_target_properties(MddBootstrap PROPERTIES
-    IMPORTED_IMPLIB "${Microsoft.WindowsAppSDK_NUGET_PACKAGE_DIR}/lib/win10-x64/Microsoft.WindowsAppRuntime.Bootstrap.lib"
-    IMPORTED_LOCATION "${Microsoft.WindowsAppSDK_NUGET_PACKAGE_DIR}/runtimes/win-x64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll")
+    IMPORTED_IMPLIB "${Microsoft.WindowsAppSDK_NUGET_PACKAGE_DIR}/lib/win10-${ARCH}/Microsoft.WindowsAppRuntime.Bootstrap.lib"
+    IMPORTED_LOCATION "${Microsoft.WindowsAppSDK_NUGET_PACKAGE_DIR}/runtimes/win-${ARCH}/native/Microsoft.WindowsAppRuntime.Bootstrap.dll")
